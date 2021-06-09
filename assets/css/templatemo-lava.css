@@ -746,7 +746,7 @@ about
 */
 
 #about {
-  padding: 100px 0px;
+  padding: 135px 0px;
   position: relative;
   z-index: 9;
 }
@@ -864,6 +864,11 @@ testimonials
 
 #testimonials {
   padding-top: 100px;
+  position: relative;
+  z-index: 9;
+}
+
+#toolschecker {
   position: relative;
   z-index: 9;
 }
