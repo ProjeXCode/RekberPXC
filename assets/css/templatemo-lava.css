@@ -810,35 +810,35 @@ promotion
   margin-top: -200px;
 }
 
-#promotion {
+#howtouse {
   padding: 100px 0px;
 }
 
-#promotion .left-image {
+#howtouse .left-image {
   align-self: center;
 }
 
-#promotion .right-text ul {
+#howtouse .right-text ul {
   padding: 0;
   margin: 0;
 }
 
-#promotion .right-text ul li {
+#howtouse .right-text ul li {
   display: inline-block;
   margin-bottom: 60px;
 }
 
-#promotion .right-text ul li:last-child {
+#howtouse .right-text ul li:last-child {
   margin-bottom: 0px;
 }
 
-#promotion .right-text img {
+#howtouse .right-text img {
   display: inline-block;
   float: left;
   margin-right: 30px;
 }
 
-#promotion .right-text h4 {
+#howtouse .right-text h4 {
   font-size: 22px;
   color: #1e1e1e;
   margin-bottom: 15px;
