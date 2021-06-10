@@ -1,6 +1,6 @@
 $('#api_button').click(function () {
   let id = $('#api_id_input').val();
-  $('#api_id_input').html("<span class='status-message'>" + "Mengambil Data..." + "</span>");
+  $('#status_message').html("<span class='status-message'>" + "Mengambil Data..." + "</span>");
   fetch('https://cdn.jsdelivr.net/gh/ProjeXCode/RekberPXC@master/data/' + id + '.json')
     .then(res => res.json())
     .then(res => {
