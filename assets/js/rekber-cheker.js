@@ -20,18 +20,8 @@ $('#api_button').click(function () {
       $('#status_message').html("<span class='data-success'>" + "Data Sukses Dimuat." + "</span>" + "<span class='success-message'>" + "REKBER VALID SILAHKAN LANJUTKAN TRANSAKSI ANDA" + "</span>");
     })
     .catch(e => {
-     $('#status_message').alert("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>" + "<span class='failed-message'>" + "REKBER NO VALID SILAHKAN URUNGKAN NIAT ANDA UNTUK BERTRANSAKSI" + "</span>");
-     $('.rekber_ovo').val("None");
-     $('.rekber_dana').val("None");
-     $('.rekber_gopay').val("None");
-     $('.rekber_linkaja').val("None");
-     $('.rekber_bca').val("None");
-     $('.rekber_bni').val("None");
-     $('.rekber_mandiri').val("None");
-     $('.rekber_whatsapp').val("None");
-     $('.rekber_an').val("None");
-     $('.rekber_fb_name').val("None");
-     $('.rekber_fb_url').val("None");
+     $('#status_message').html("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>" + "<span class='failed-message'>" + "REKBER NO VALID SILAHKAN URUNGKAN NIAT ANDA UNTUK BERTRANSAKSI" + "</span>");
+     $('#valid').val("None");
       console.log(e)
     });
 })
