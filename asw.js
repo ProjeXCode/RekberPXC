@@ -20,12 +20,12 @@ $('#api_button').click(function () {
     .then(() => {
       $('#status_message').html("<span class='data-success'>" + "Data Sukses Dimuat." + "</span>");
       $('#rekber_message').html("<span class='validrekber'>" + "VALID." + "</span>");
-      $('#rekber_notif').alert("<span class='validnotif'>" + "Data Valid : Silahkan Lanjutkan Transaksi anda." + "</span>");
+      $('#rekber_notif').alert("Data Valid : Silahkan Lanjutkan Transaksi anda.");
     })
     .catch(e => {
      $('#status_message').html("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>");
      $('#rekber_message').html("<span class='validrekber'>" + "TIDAK VALID." + "</span>");
-     $('#rekber_notif').alert("<span class='validnotif'>" + "Data Tidak Valid : Tolong Hentikan/Cek Kembali Rekber Transaksi Anda Asli atau Palsu." + "</span>");
+     $('#rekber_notif').alert("Data Tidak Valid : Tolong Hentikan/Cek Kembali Rekber Transaksi Anda Asli atau Palsu.");
      $('.valid').val("None");
      $('.validtext').html("None");
       console.log(e)
