@@ -4,24 +4,30 @@ $('#api_button').click(function () {
   fetch('https://cdn.jsdelivr.net/gh/ProjeXCode/RekberPXC@master/data/' + id + '.json')
     .then(res => res.json())
     .then(res => {
-      $('#rekber_ovo').text(res.OVO);
-      $('#rekber_dana').text(res.DANA);
-      $('#rekber_gopay').text(res.GOPAY);
-      $('#rekber_linkaja').text(res.LINK_AJA);
-      $('#rekber_bca').text(res.BCA);
-      $('#rekber_bni').text(res.BNI);
-      $('#rekber_mandiri').text(res.MANDIRI);
-      $('#rekber_whatsapp').text(res.WHATSAPP);
-      $('#rekber_an').text(res.ATAS_NAMA);
-      $('#rekber_fb_name').text(res.FB_NAME);
-      $('#rekber_fb_url').text(res.FB_URL);
+      $('#rekber_ovo').val(res.OVO);
+      $('#rekber_dana').val(res.DANA);
+      $('#rekber_gopay').val(res.GOPAY);
+      $('#rekber_linkaja').val(res.LINK_AJA);
+      $('#rekber_bca').val(res.BCA);
+      $('#rekber_bni').val(res.BNI);
+      $('#rekber_mandiri').val(res.MANDIRI);
+      $('#rekber_whatsapp').val(res.WHATSAPP);
+      $('#rekber_an').val(res.ATAS_NAMA);
+      $('#rekber_fb_name').html(res.FB_NAME);
+      $('#rekber_fb_url').html(res.FB_URL);
+      $('#rekber_fb_links').attr("href",res.FB_LINKS);
      })
     .then(() => {
-      $('#status_message').html("<span class='data-success'>" + "Data Sukses Dimuat." + "</span>" + "<span class='success-message'>" + "REKBER VALID SILAHKAN LANJUTKAN TRANSAKSI ANDA" + "</span>");
+      $('#status_message').html("<span class='data-success'>" + "Data Sukses Dimuat." + "</span>");
+      $('#rekber_message').html("<span class='validrekber'>" + "VALID." + "</span>");
+      alert("Data Valid : Silahkan Lanjutkan Transaksi anda.");
     })
     .catch(e => {
-     $('#status_message').html("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>" + "<span class='failed-message'>" + "REKBER NO VALID SILAHKAN URUNGKAN NIAT ANDA UNTUK BERTRANSAKSI" + "</span>");
-     $('#valid').text("None");
+     $('#status_message').html("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>");
+     $('#rekber_message').html("<span class='validrekber'>" + "TIDAK VALID." + "</span>");
+     $('.valid').val("None");
+     $('.validtext').html("None");
+     alert("Data Tidak Valid : Tolong Hentikan/Cek Kembali Rekber Transaksi Anda Asli atau Palsu.");
       console.log(e)
     });
 })
