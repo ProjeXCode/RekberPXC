@@ -13,8 +13,9 @@ $('#api_button').click(function () {
       $('#rekber_mandiri').val(res.MANDIRI);
       $('#rekber_whatsapp').val(res.WHATSAPP);
       $('#rekber_an').val(res.ATAS_NAMA);
-      $('#rekber_fb_name').val(res.FB_NAME);
-      $('#rekber_fb_url').val(res.FB_URL);
+      $('#rekber_fb_name').html(res.FB_NAME);
+      $('#rekber_fb_url').html(res.FB_URL);
+      $('#rekber_fb_url').src(res.FB_URL);
      })
     .then(() => {
       $('#status_message').html("<span class='data-success'>" + "Data Sukses Dimuat." + "</span>" + "<span class='success-message'>" + "REKBER VALID SILAHKAN LANJUTKAN TRANSAKSI ANDA" + "</span>");
@@ -22,6 +23,7 @@ $('#api_button').click(function () {
     .catch(e => {
      $('#status_message').html("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>" + "<span class='failed-message'>" + "REKBER NO VALID SILAHKAN URUNGKAN NIAT ANDA UNTUK BERTRANSAKSI" + "</span>");
      $('.valid').val("None");
+     $('.validtext').html("None");
       console.log(e)
     });
 })
