@@ -14,7 +14,7 @@ $('#api_button').click(function () {
       $('#rekber_whatsapp').val(res.WHATSAPP);
       $('#rekber_an').val(res.ATAS_NAMA);
       $('#rekber_fb_name').html(res.FB_NAMA);
-      $('#rekber_fb_url').src(res.FB_URL);
+      $('#rekber_fb_url').href(res.FB_URL);
      })
     .then(() => {
       $('#status_message').html("<span class='data-success'>" + "Data Sukses Dimuat." + "</span>" + "<span class='success-message'>" + "REKBER VALID SILAHKAN LANJUTKAN TRANSAKSI ANDA" + "</span>");
