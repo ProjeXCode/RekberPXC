@@ -1,4 +1,3 @@
-<script>
 $('#api_button').click(function () {
   let id = $('#api_id_input').val();
   $('#api_id_input').html("<span class='status-message'>" + "Mengambil Data..." + "</span>");
@@ -23,4 +22,3 @@ $('#api_button').click(function () {
       console.log(e)
     });
 })
-</script>
