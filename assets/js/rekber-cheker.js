@@ -21,17 +21,17 @@ $('#api_button').click(function () {
     })
     .catch(e => {
      $('#status_message').html("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>" + "<span class='failed-message'>" + "REKBER NO VALID SILAHKAN URUNGKAN NIAT ANDA UNTUK BERTRANSAKSI" + "</span>");
-     $('#rekber_ovo').html("None");
-      $('#rekber_dana').html("None");
-      $('#rekber_gopay').html("None");
-      $('#rekber_linkaja').html("None");
-      $('#rekber_bca').html("None");
-      $('#rekber_bni').html("None");
-      $('#rekber_mandiri').html("None");
-      $('#rekber_whatsapp').html("None");
-      $('#rekber_an').html("None");
-      $('#rekber_fb_name').html("None");
-      $('#rekber_fb_url').html("None");
+     $('#rekber_ovo').val("None");
+      $('#rekber_dana').val("None");
+      $('#rekber_gopay').val("None");
+      $('#rekber_linkaja').val("None");
+      $('#rekber_bca').val("None");
+      $('#rekber_bni').val("None");
+      $('#rekber_mandiri').val("None");
+      $('#rekber_whatsapp').val("None");
+      $('#rekber_an').val("None");
+      $('#rekber_fb_name').val("None");
+      $('#rekber_fb_url').val("None");
       console.log(e)
     });
 })
