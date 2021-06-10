@@ -18,10 +18,14 @@ $('#api_button').click(function () {
       $('#rekber_fb_links').attr("href",res.FB_LINKS);
      })
     .then(() => {
-      $('#status_message').html("<span class='data-success'>" + "Data Sukses Dimuat." + "</span>" + "<span class='success-message'>" + "REKBER VALID SILAHKAN LANJUTKAN TRANSAKSI ANDA" + "</span>");
+      $('#status_message').html("<span class='data-success'>" + "Data Sukses Dimuat." + "</span>");
+      $('#rekber_message').html("<span class='validrekber'>" + "VALID." + "</span>");
+      $('#rekber_notif').alert("<span class='validnotif'>" + "Data Valid : Silahkan Lanjutkan Transaksi anda." + "</span>");
     })
     .catch(e => {
-     $('#status_message').html("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>" + "<span class='failed-message'>" + "REKBER NO VALID SILAHKAN URUNGKAN NIAT ANDA UNTUK BERTRANSAKSI" + "</span>");
+     $('#status_message').html("<span class='data-failed'>" + "Data Gagal Dimuat." + "</span>");
+     $('#rekber_message').html("<span class='validrekber'>" + "TIDAK VALID." + "</span>");
+     $('#rekber_notif').alert("<span class='validnotif'>" + "Data Tidak Valid : Tolong Hentikan/Cek Kembali Rekber Transaksi Anda Asli atau Palsu." + "</span>");
      $('.valid').val("None");
      $('.validtext').html("None");
       console.log(e)
