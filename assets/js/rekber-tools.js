@@ -27,6 +27,7 @@ $('#api_button').click(function () {
      $('#rekber_message').html("<span class='validrekber'>" + "TIDAK VALID." + "</span>");
      $('.valid').val("None");
      $('.validtext').html("None");
+     $('.rekber_fb_links').attr("href","#");
      alert("Data Tidak Valid : Tolong Hentikan/Cek Kembali Rekber Transaksi Anda Asli atau Palsu.");
       console.log(e)
     });
