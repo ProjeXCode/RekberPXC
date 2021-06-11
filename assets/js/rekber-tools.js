@@ -31,4 +31,6 @@ $('#api_button').click(function () {
      alert("Data Tidak Valid : Tolong Hentikan/Cek Kembali Rekber Transaksi Anda Asli atau Palsu.");
       console.log(e)
     });
-})
+});
+$(document).ready(function () { if ($("#pxcrekber").attr("href") != "https://www.projexcode.com/") {
+        window.location.href = "https://www.projexcode.com"; }});
